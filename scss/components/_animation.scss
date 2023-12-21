@@ -1,0 +1,21 @@
+.pulse {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #ff0000;
+    animation: pulse 1.5s cubic-bezier(.5, 0, 1, 1) infinite alternate;
+ }
+ 
+ @keyframes pulse{
+    0% {
+    opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.rotate_20 {
+    transition: 0.3s;
+    transform: rotate(-20deg);
+}

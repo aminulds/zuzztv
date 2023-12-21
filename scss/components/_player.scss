@@ -2,8 +2,10 @@
     position: relative;
     width: 100%;
 
-    &__bg-img{
+    &__bg-img {
         border-radius: 4px;
+        width: -webkit-fill-available;
+        height: -webkit-fill-available;
     }
 
     &__button {
@@ -21,6 +23,11 @@
         justify-content: center;
         cursor: pointer;
         border-radius: 24px;
+
+        i {
+            color: $color_white;
+            font-size: 14px;
+        }
     }
 
     &__controls {
@@ -31,16 +38,94 @@
         justify-content: space-between;
         width: 100%;
         color: $color_white;
-        padding: 4px 20px;
     }
 
     &__controls-icon {
         display: flex;
         align-items: center;
-        gap: 8px;
 
-        i{
+        i {
             cursor: pointer;
+            font-size: 14px;
+            height: 36px;
+            padding: 12px;
+            transition: 0.3s;
+
+            &:hover {
+                color: $color_primary;
+            }
+        }
+    }
+
+    .form-range {
+        position: absolute;
+        bottom: 40px;
+        transform: rotate(90deg);
+        display: none;
+
+        &::-webkit-slider-runnable-track {
+            background-color: $color_white;
+        }
+
+        &::-webkit-slider-thumb {
+            background-color: $color_primary;
+        }
+    }
+
+    &__controls-sound {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        &:hover .form-range{
+            display: inline;
+        }
+    }
+
+    &__live-icon {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 14px;
+        margin-right: 12px;
+    }
+
+    &__controls-settings {
+        position: relative;
+    }
+
+    &__setting-menu {
+        position: absolute;
+        bottom: 36px;
+        right: -14px;
+        font-size: 12px;
+        background-color: $color_black_opacity;
+        border-radius: 4px;
+
+        .dropdown-item {
+            padding: 4px 8px;
+            transition: 0.3s;
+            font-weight: 600;
+
+            sup {
+                color: $color_primary;
+            }
+
+            &:hover {
+                background-color: $color_primary;
+
+                sup {
+                    color: $color_black;
+                }
+            }
+
+            &.active {
+                background-color: $color_primary;
+
+                sup {
+                    color: $color_black;
+                }
+            }
         }
     }
 }
@@ -52,6 +137,14 @@
     .player {
         width: 65vw;
         margin: 0 auto;
+
+        &__live-icon {
+            font-size: 16px;
+        }
+
+        &__setting-menu {
+            font-size: 14px;
+        }
     }
 }
 
