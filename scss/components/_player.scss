@@ -2,6 +2,17 @@
     position: relative;
     width: 100%;
 
+    &__title {
+        position: absolute;
+        color: $color_white;
+        background-color: $color_black_opacity;
+        height: fit-content;
+        width: -webkit-fill-available;
+        padding: 4px 8px;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
     &__bg-img {
         border-radius: 4px;
         width: -webkit-fill-available;
@@ -15,18 +26,28 @@
         top: 0;
         bottom: 0;
         margin: auto;
-        width: 70px;
-        height: 45px;
-        background-color: $color_primary;
+        width: 60px;
+        height: 36px;
+        transition: 0.3s;
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
         border-radius: 24px;
+        background: radial-gradient(farthest-side, $color_red 94%, #0000),
+            radial-gradient(farthest-side, $color_primary 94%, #0000),
+            $color_red;
+        background-position: center;
+        background-repeat: no-repeat;
+        // animation: colorSlide 2.0999999999999996s infinite;
 
         i {
             color: $color_white;
             font-size: 14px;
+        }
+
+        &:hover {
+            transform: scale(1.2);
         }
     }
 
@@ -77,7 +98,7 @@
         align-items: center;
         position: relative;
 
-        &:hover .form-range{
+        &:hover .form-range {
             display: inline;
         }
     }
@@ -128,6 +149,50 @@
             }
         }
     }
+
+    &:hover &__button {
+        animation: colorSlide 2s infinite;
+        // animation: playProgress 5s infinite;
+    }
+
+    &__popup {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 80%;
+        height: 80%;
+        padding: 16px;
+        background-color: $color_black;
+        color: $color_white;
+        border-radius: 4px;
+    }
+
+    &__popup-banner{
+        border-radius: 4px;
+        // width: 85%;
+    }
+
+    &__popup-logo{
+        width: 150px;
+        margin: 8px 0;
+    }
+
+    &__popup-devices{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    &__list{
+        li{
+            &::before{
+                content: '🏀';
+            }
+        }
+    }
 }
 
 
@@ -135,8 +200,13 @@
 // Responsive
 @media (min-width: 576px) {
     .player {
-        width: 65vw;
+        width: 70vw;
         margin: 0 auto;
+
+        &__title{
+            font-size: 16px;
+            padding: 8px 16px;
+        }
 
         &__live-icon {
             font-size: 16px;
@@ -144,6 +214,19 @@
 
         &__setting-menu {
             font-size: 14px;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .player {
+        &__button {
+            width: 70px;
+            height: 44px;
+        }
+
+        &__popup{
+            padding: 20px;
         }
     }
 }

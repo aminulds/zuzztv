@@ -1,8 +1,9 @@
+// puls
 .pulse {
     width: 11px;
     height: 11px;
     border-radius: 50%;
-    background: #ff0000;
+    background: $color_red;
     animation: pulse 1.5s cubic-bezier(.5, 0, 1, 1) infinite alternate;
  }
  
@@ -15,7 +16,62 @@
     }
 }
 
+// rotate
 .rotate_20 {
     transition: 0.3s;
     transform: rotate(-20deg);
 }
+
+//  colorSlide
+ @keyframes colorSlide {
+    0% {
+       background-size: 0    0   ,0    0;
+    }
+ 
+    30%, 50% {
+       background-size: 0    0   ,120% 120%;
+    }
+ 
+    80%, 100% {
+       background-size: 120% 120%,120% 120%;
+    }
+ }
+
+//  progress
+ @keyframes playProgress {
+    0% {
+       background: conic-gradient($color_primary 0     ,#0000 0);
+    }
+ 
+    12.5% {
+       background: conic-gradient($color_primary 45deg ,#0000 46deg);
+    }
+ 
+    25% {
+       background: conic-gradient($color_primary 90deg ,#0000 91deg);
+    }
+ 
+    37.5% {
+       background: conic-gradient($color_primary 135deg,#0000 136deg);
+    }
+ 
+    50% {
+       background: conic-gradient($color_primary 180deg,#0000 181deg);
+    }
+ 
+    62.5% {
+       background: conic-gradient($color_primary 225deg,#0000 226deg);
+    }
+ 
+    75% {
+       background: conic-gradient($color_primary 270deg,#0000 271deg);
+    }
+ 
+    87.5% {
+       background: conic-gradient($color_primary 315deg,#0000 316deg);
+    }
+ 
+    100% {
+       background: conic-gradient($color_primary 360deg,#0000 360deg);
+    }
+ }
