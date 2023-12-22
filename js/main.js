@@ -16,7 +16,7 @@
 //     $(".player").animate(d,speed);            
 // }
 
-$( document ).ready(function() {
+$(document).ready(function () {
     $('.videoPlayerBtn').on('click', function (e) {
         e.preventDefault();
         let url = $(this).attr('data-url');
@@ -50,26 +50,31 @@ $( document ).ready(function() {
 
     $('.player__popup').hide();
     // player__button
-    $(document).on('click', '.click_play', function(){
-        $('.player__button').css({'animation': 'playProgress 5s infinite'});
-        $('.player__popup').show();
+    $(document).on('click', '.click_play', function () {
+        $('.player__button').css({ 'animation': 'playProgress 5s infinite' });
+
+        setTimeout(function () {
+            $('.player__popup').show();
+            $('.player__button').css({ 'animation': 'colorSlide 2s infinite' });
+        }, 5000);
+        
     });
 
-    $(document).on('click', '.cancel_button', function(){
-        $('.player__popup').hide();
+    $(document).on('click', '.cancel_button', function () {
+        $('.player__popup').fadeIn(300).hide();
     });
     // sound_icon
-    $(document).on('click', '.sound_icon', function(){
+    $(document).on('click', '.sound_icon', function () {
         // $('#sound_range').fadeIn(300).toggleClass('d-none');
     });
 
     // setting_icon
-    $(document).on('click', '.setting_icon', function(){
+    $(document).on('click', '.setting_icon', function () {
         $(this).toggleClass('rotate_20');
         $('.player__setting-menu').fadeIn(300).toggleClass('d-none');
     });
 
-    $(document).on('click', '.dropdown-item', function(){
+    $(document).on('click', '.dropdown-item', function () {
         $('.dropdown-item').removeClass('active');
         $(this).toggleClass('active');
         $('.player__setting-menu').toggleClass('d-none');
