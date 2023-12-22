@@ -592,6 +592,12 @@ video {
   color: #ffffff;
   border-radius: 4px;
 }
+.player .cancel_button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
 .player__popup-banner {
   border-radius: 4px;
 }
