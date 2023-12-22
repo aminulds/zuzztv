@@ -591,6 +591,15 @@ video {
   background-color: #031026;
   color: #ffffff;
   border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .player .cancel_button {
   position: absolute;
@@ -670,6 +679,7 @@ video {
 }
 .player__list li::before {
   content: "🏀";
+  margin-right: 4px;
 }
 .player__list .hide_item {
   display: none;
@@ -698,13 +708,27 @@ video {
   .player__popup-logo {
     width: 90px;
   }
+  .player__popup-trust .trust_logo {
+    width: 70px;
+  }
+  .player__popup-trust .trust_start i {
+    font-size: 10px;
+  }
   .player__popup-devices img {
     width: 30px;
+  }
+  .player__list {
+    font-size: 14px;
+    line-height: 26px;
   }
 }
 @media (min-width: 992px) {
   .player__popup-devices img {
     width: 36px;
+  }
+  .player__list {
+    font-size: 16px;
+    line-height: 32px;
   }
 }
 @media (min-width: 1200px) {
@@ -718,11 +742,19 @@ video {
   .player__popup {
     padding: 20px;
   }
+  .player__list {
+    font-size: 18px;
+    line-height: 36px;
+  }
 }
 @media (min-width: 1400px) {
   .player {
-    width: 50vw;
+    width: 65vw;
     margin: 0 auto;
+  }
+  .player .trust_text {
+    font-size: 8px;
+    margin-left: 16px;
   }
 }
 .pulse {
@@ -910,13 +942,14 @@ video {
           transform: translate3d(0, 0, -1em);
 }
 
-@media (min-width: 576px) {
-  .button_3d {
-    margin-bottom: 0;
-  }
-}
 @media (min-width: 768px) {
   .button_3d {
-    margin-bottom: 30px;
+    margin-bottom: 36px;
+    font-size: 16px;
+  }
+}
+@media (min-width: 1200px) {
+  .button_3d {
+    font-size: 20px;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -67,14 +67,16 @@ $pink-shadow: #ffe3e2;
     }
 }
 
-@media (min-width: 576px) {
-    .button_3d{
-        margin-bottom: 0;
-    }
-}
 
 @media (min-width: 768px) {
     .button_3d{
-        margin-bottom: 30px;
+        margin-bottom: 36px;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .button_3d{
+        font-size: 20px;
     }
 }
