@@ -24,18 +24,20 @@
 
     <section class="my-5">
         <div class="container">
+
             <!-- player -->
             <div class="player" id="player">
+                <!-- <h5 class="player__title">Access the day of reckoning Anthony Joshua vs. Otto Wallin live stream</h5> -->
                 <!-- bg image -->
                 <img class="player__bg-img" src="images/player_bg.png" alt="player_bg">
                 <!-- play button -->
-                <div class="player__button">
+                <div class="player__button click_play">
                     <i class="fa-solid fa-play"></i>
                 </div>
                 <!-- controls -->
                 <div class="player__controls">
                     <div class="player__controls-icon">
-                        <i class="fa-solid fa-play"></i>
+                        <i class="fa-solid fa-play click_play"></i>
                         <!-- sound -->
                         <div class="player__controls-sound">
                             <input type="range" class="form-range" id="sound_range">
@@ -62,7 +64,34 @@
                         <i class="fa-solid fa-expand full_screen"></i>
                     </div>
                 </div>
+                <!-- popup modal -->
+                <div class="player__popup">
+                    <div class="row g-4 row-cols-1 row-cols-xl-2">
+                        <div class="col">
+                            <img class="player__popup-banner" src="images/popup_banner.png" alt="popup_banner">
+                            <img class="player__popup-logo" src="images/zuzzlogo.png" alt="zuzzlogo">
+                            <div class="player__popup-devices">
+                                <img class="img-fluid" width="30" src="images/devices/devices_pc.png" alt="All Devices">
+                                <img class="img-fluid" width="30" src="images/devices/apple_pc.png" alt="iOS">
+                                <img class="img-fluid" width="30" src="images/devices/android_pc.png" alt="Android">
+                                <img class="img-fluid" width="30" src="images/devices/chromecast_pc.png" alt="Chromecast">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <ul class="player__list">
+                                <li>Free with Ads & Malware</li>
+                                <li>Free with Ads & Malware</li>
+                                <li>Free with Ads & Malware</li>
+                                <li>Free with Ads & Malware</li>
+                                <li>Free with Ads & Malware</li>
+                                <li>Free with Ads & Malware</li>
+                                <li>Free with Ads & Malware</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </div>
     </section>
 

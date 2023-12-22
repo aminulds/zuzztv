@@ -51,7 +51,10 @@ $(function () {
         //alert(page);
     });
 
-
+    // player__button
+    $(document).on('click', '.click_play', function(){
+        $('.player__button').css({'animation': 'playProgress 5s infinite'});
+    });
     // sound_icon
     $(document).on('click', '.sound_icon', function(){
         // $('#sound_range').fadeIn(300).toggleClass('d-none');
