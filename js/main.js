@@ -54,14 +54,15 @@ $(document).ready(function () {
         $('.player__button').css({ 'animation': 'playProgress 5s infinite' });
 
         setTimeout(function () {
-            $('.player__popup').show();
+            $('.player__popup').fadeIn(600).show();
             $('.player__button').css({ 'animation': 'colorSlide 2s infinite' });
         }, 5000);
         
     });
 
     $(document).on('click', '.cancel_button', function () {
-        $('.player__popup').fadeIn(300).hide();
+        $('.player__popup').fadeOut(600).hide();
+        $('.player__button').css({ 'animation': 'colorSlide 2s infinite' });
     });
     // sound_icon
     $(document).on('click', '.sound_icon', function () {
