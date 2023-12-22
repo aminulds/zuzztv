@@ -16,10 +16,7 @@
 //     $(".player").animate(d,speed);            
 // }
 
-
-$(function () {
-
-
+$( document ).ready(function() {
     $('.videoPlayerBtn').on('click', function (e) {
         e.preventDefault();
         let url = $(this).attr('data-url');
@@ -51,9 +48,15 @@ $(function () {
         //alert(page);
     });
 
+    $('.player__popup').hide();
     // player__button
     $(document).on('click', '.click_play', function(){
         $('.player__button').css({'animation': 'playProgress 5s infinite'});
+        $('.player__popup').show();
+    });
+
+    $(document).on('click', '.cancel_button', function(){
+        $('.player__popup').hide();
     });
     // sound_icon
     $(document).on('click', '.sound_icon', function(){
@@ -84,10 +87,8 @@ $(function () {
         e.preventDefault();
         exitFullscreen();
     });
-
-
-
 });
+
 
 function launchIntoFullscreen(element) {
     if (element.requestFullscreen) {
