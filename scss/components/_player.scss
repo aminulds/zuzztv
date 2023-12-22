@@ -168,6 +168,9 @@
         background-color: $color_black;
         color: $color_white;
         border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .cancel_button {
@@ -241,6 +244,7 @@
         li {
             &::before {
                 content: '🏀';
+                margin-right: 4px;
             }
         }
 
@@ -283,10 +287,27 @@
             width: 90px;
         }
 
+        &__popup-trust{
+            .trust_logo{
+                width: 70px;
+            }
+
+            .trust_start{
+                i{
+                    font-size: 10px;
+                }
+            }
+        }
+
         &__popup-devices {
             img {
                 width: 30px;
             }
+        }
+
+        &__list{
+            font-size: 14px;
+            line-height: 26px;
         }
     }
 }
@@ -297,6 +318,11 @@
             img {
                 width: 36px;
             }
+        }
+
+        &__list{
+            font-size: 16px;
+            line-height: 32px;
         }
     }
 }
@@ -313,12 +339,22 @@
         &__popup {
             padding: 20px;
         }
+
+        &__list{
+            font-size: 18px;
+            line-height: 36px;
+        }
     }
 }
 
 @media (min-width: 1400px) {
     .player {
-        width: 50vw;
+        width: 65vw;
         margin: 0 auto;
+
+        .trust_text {
+            font-size: 8px;
+            margin-left: 16px;
+        }
     }
 }
