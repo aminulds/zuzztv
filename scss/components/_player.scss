@@ -170,6 +170,13 @@
         border-radius: 4px;
     }
 
+    .cancel_button{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+    }
+
     &__popup-banner{
         border-radius: 4px;
         // width: 85%;
