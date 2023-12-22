@@ -5,12 +5,13 @@
     &__title {
         position: absolute;
         color: $color_white;
-        background-color: $color_black_opacity;
-        height: fit-content;
-        width: -webkit-fill-available;
+        // color: $color_white;
+        // background-color: $color_black_opacity;
+        // height: fit-content;
+        // width: -webkit-fill-available;
         padding: 4px 8px;
         font-size: 14px;
-        font-weight: 600;
+        font-weight: 700;
     }
 
     &__bg-img {
@@ -263,7 +264,7 @@
         margin: 0 auto;
 
         &__title {
-            font-size: 16px;
+            font-size: 20px;
             padding: 8px 16px;
         }
 

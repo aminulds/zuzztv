@@ -67,6 +67,46 @@ $pink-shadow: #ffe3e2;
     }
 }
 
+.link_button{
+    background-color: $color_red;
+    padding: 12px 24px;
+    color: $color_white;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 2px;
+    transition: 0.3s;
+
+    &:hover{
+        background-color: $color_primary;
+        color: $color_white;
+        transform: scale(1.1);
+    }
+}
+
+.extra_link{
+    margin-top: 16px;
+    display: flex;
+    align-content: center;
+    gap: 12px;
+
+    a{
+        font-size: 18px;
+        font-weight: 700;
+        color: $color_red;
+        text-decoration: underline;
+        transition: 0.3s;
+
+        &:hover{
+            color: $color_black;
+        }
+
+        &:not(:last-child){
+            padding-right: 12px;
+            border-right: 2px solid #ddd;
+        }
+    }
+}
+
 
 @media (min-width: 768px) {
     .button_3d{
